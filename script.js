@@ -1,3 +1,14 @@
+let allowedWords = [];
+
+fetch("guesses.txt")
+    .then(response => response.text())
+    .then(text => {
+        allowedWords = text
+            .split("\n")
+            .map(word => word.trim().toLowerCase())
+            .filter(word => word.length === 5);
+    });
+
 const answers = [
 
     "cutie",
@@ -71,6 +82,13 @@ function submitGuess() {
         alert("5 letters only poopdi");
 
         return;
+    }
+
+    if(!allowedWords.includes(guess)) {
+
+    alert("That's not a valid word poopdi 😌");
+
+    return;
     }
 
     let row =
