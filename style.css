@@ -1,9 +1,9 @@
 body {
     background: linear-gradient(
         to bottom,
-        #ffd6e7 0%,
-        #ffe4ef 50%,
-        #fff0f6 100%
+        #f7a8c8 0%,
+        #f5b4d0 40%,
+        #f8c6db 100%
     );
 
     color: #5c3a4a;
@@ -131,46 +131,38 @@ button:hover {
     }
 }
 
-/* Clouds */
+
+
 
 body::before,
 body::after {
-    content: "";
+    content: "❤ ❤ ❤ ❤ ❤";
     position: fixed;
-    top: 0;
-    left: -400px;
-    width: 400px;
-    height: 120px;
+    font-size: 50px;
+    opacity: 0.15;
     pointer-events: none;
     z-index: -1;
-
-    background:
-        radial-gradient(circle at 25% 50%, white 35px, transparent 36px),
-        radial-gradient(circle at 45% 40%, white 45px, transparent 46px),
-        radial-gradient(circle at 65% 50%, white 40px, transparent 41px),
-        radial-gradient(circle at 85% 55%, white 30px, transparent 31px);
-
-    opacity: 0.65;
+    color: #ff5c9d;
 }
 
 body::before {
-    top: 15%;
-    animation: driftClouds 70s linear infinite;
+    left: -300px;
+    top: 25%;
+    animation: floatHearts 20s linear infinite;
 }
 
 body::after {
-    top: 55%;
-    transform: scale(1.3);
-    opacity: 0.5;
-    animation: driftClouds 95s linear infinite;
+    left: -400px;
+    top: 70%;
+    animation: floatHearts 28s linear infinite;
 }
 
-@keyframes driftClouds {
+@keyframes floatHearts {
     from {
-        transform: translateX(-500px);
+        transform: translateX(-300px);
     }
     to {
-        transform: translateX(calc(100vw + 600px));
+        transform: translateX(calc(100vw + 500px));
     }
 }
 
