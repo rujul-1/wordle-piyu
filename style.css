@@ -134,35 +134,51 @@ button:hover {
 
 
 
-body::before,
-body::after {
-    content: "❤ ❤ ❤ ❤ ❤";
+.heart {
     position: fixed;
-    font-size: 50px;
+    bottom: -50px;
+    color: #ff4f92;
     opacity: 0.15;
-    pointer-events: none;
     z-index: -1;
-    color: #ff5c9d;
+    pointer-events: none;
 }
 
-body::before {
-    left: -300px;
-    top: 25%;
-    animation: floatHearts 20s linear infinite;
+.heart1 {
+    left: 10%;
+    font-size: 40px;
+    animation: rise 12s linear infinite;
 }
 
-body::after {
-    left: -400px;
-    top: 70%;
-    animation: floatHearts 28s linear infinite;
+.heart2 {
+    left: 30%;
+    font-size: 60px;
+    animation: rise 15s linear infinite;
 }
 
-@keyframes floatHearts {
+.heart3 {
+    left: 50%;
+    font-size: 45px;
+    animation: rise 18s linear infinite;
+}
+
+.heart4 {
+    left: 70%;
+    font-size: 55px;
+    animation: rise 14s linear infinite;
+}
+
+.heart5 {
+    left: 90%;
+    font-size: 35px;
+    animation: rise 16s linear infinite;
+}
+
+@keyframes rise {
     from {
-        transform: translateX(-300px);
+        transform: translateY(0);
     }
     to {
-        transform: translateX(calc(100vw + 500px));
+        transform: translateY(-120vh);
     }
 }
 
