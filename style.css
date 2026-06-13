@@ -97,19 +97,25 @@ input {
 }
 
 button {
-    font-size: 18px;
-    padding: 8px 20px;
 
-    background-color: #ffb6d5;
+    font-size: 18px;
+    padding: 8px 18px;
+
+    background-color: #ff4d6d;
+    color: white;
+
     border: none;
     border-radius: 10px;
 
-    color: white;
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #ff9fc8;
+
+    background-color: #e63956;
+    transform: scale(1.05);
 }
 .flip {
 
